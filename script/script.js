@@ -1,22 +1,27 @@
-let num = 266219;
-let a = 1;
+let lang = 'en';
+let daysRu = 'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье';
+let daysEn = 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday';
 
-while (num !== 0) {
-    let b = num % 10;
-    a *= b;
-    num = Math.floor(num / 10);
+if (lang === 'ru') {
+    console.log(daysRu);
+} else {
+    console.log(daysEn);
 }
 
-a = a ** 3;
-let b = a;
-console.log(a);
-num = 0;
-while (a !== 0) {
-    a = Math.floor(a / 10);
-    num++;
+switch (lang) {
+    case 'ru':
+        console.log(daysRu);
+        break;
+    case 'en':
+        console.log(daysEn);
 }
 
-num -= 2;
-num = 10 ** num;
-b = Math.floor(b / num);
-console.log(b);
+let arr = new Map([
+    ['ru', 'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье'],
+    ['en', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday']
+]);
+console.log(arr.get(lang));
+
+let namePerson = 'Максим';
+
+console.log((namePerson === 'Артем') ? 'Директор' : (namePerson === 'Максим') ? 'Преподаватель' : 'Студент');
