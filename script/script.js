@@ -1,3 +1,4 @@
+'use strict';
 let lang = 'en';
 let daysRu = 'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье';
 let daysEn = 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday';
