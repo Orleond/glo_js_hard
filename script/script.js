@@ -16,6 +16,6 @@ for (let i = 2; i <= 100; i++) {
         }
     }
     if (count === 2) {
-        console.log(i);
+        console.log(i + '. Делители этого числа: 1 и ' + i);
     }
 }
