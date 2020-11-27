@@ -1,20 +1,21 @@
 'use strict';
 
-const userString = function(arg) {
+let arr = ['202', '457', '752', '244', '5687', '4789'];
 
-    return (typeof arg !== 'string') ? 'Переданный аргумент не является строкой' : (arg = arg.trim(),
-        ((arg.length > 30) ? ((arg = arg.substr(0, 30)), (arg += '...')) : arg));
-
-    // if (typeof arg !== 'string') {
-    //     return 'Переданный аргумент не является строкой';
-    // } else {
-    //     arg = arg.trim();
-    //     if (arg.length > 30) {
-    //         arg = arg.substr(0, 30);
-    //         arg += '...';
-    //     }
-    //     return arg;
-    // }
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i][0] === '2' || arr[i][0] === '4') {
+        console.log(arr[i]);
+    }
 }
 
-console.log(userString('  Длина1Длина2Длина3Длина4Длина5Длина6Длина7    '));
+for (let i = 2; i <= 100; i++) {
+    let count = 0;
+    for (let j = 1; j <= i; j++) {
+        if (i % j === 0) {
+            count++;
+        }
+    }
+    if (count === 2) {
+        console.log(i);
+    }
+}
