@@ -1,21 +1,15 @@
 'use strict';
 
-let arr = ['202', '457', '752', '244', '5687', '4789'];
+let daysOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i][0] === '2' || arr[i][0] === '4') {
-        console.log(arr[i]);
-    }
-}
-
-for (let i = 2; i <= 100; i++) {
-    let count = 0;
-    for (let j = 1; j <= i; j++) {
-        if (i % j === 0) {
-            count++;
-        }
-    }
-    if (count === 2) {
-        console.log(i + '. Делители этого числа: 1 и ' + i);
+let date = new Date(),
+    today = date.getDay();
+for (let item in daysOfWeek) {
+    if ((daysOfWeek[item] === 'Суббота' || daysOfWeek[item] === 'Воскресенье') && +item !== today) {
+        document.getElementById('text').innerHTML += '<em>' + daysOfWeek[item] + '</em>' + '<br>';
+    } else if (+item === today) {
+        document.getElementById('text').innerHTML += '<strong><em>' + daysOfWeek[item] + '</em></strong>' + '<br>';
+    } else {
+        document.getElementById('text').innerHTML += daysOfWeek[item] + '<br>';
     }
 }
